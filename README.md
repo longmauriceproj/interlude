@@ -1,4 +1,4 @@
-# Moonlit Cloud - Restaurant App
+# interlude - Restaurant App
 
 An open source application bootstrapped on a [T3 Stack](https://create.t3.gg/) project.
 
@@ -45,4 +45,4 @@ The goal is to build a fully functional, responsive restaurant landing page with
 
 ## License
 
-Licensed under the [MIT license](https://github.com/longmauriceproj/moonlightcloud/blob/main/LICENSE.txt).
+Licensed under the [MIT license](https://github.com/longmauriceproj/interlude/blob/main/LICENSE.txt).
