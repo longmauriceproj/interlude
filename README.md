@@ -25,7 +25,7 @@ The goal is to build a fully functional, responsive restaurant landing page with
 - Authentication using **NextAuth.js**
 - ORM using **Prisma**
 - Database on **Supabase**
-- UI Components built using **Tailwind UI**
+- UI Components built using **Radix UI**
 - Styled using **Tailwind CSS**
 - Subscriptions using **Stripe**
 - Validations using **Zod**
@@ -33,7 +33,7 @@ The goal is to build a fully functional, responsive restaurant landing page with
 
 ## Roadmap
 
-- [ ] Build marketing pages
+- [ ] Build landing page
 - [ ] Build dashboard pages
 - [ ] Add CMS
 - [ ] Add CRM
