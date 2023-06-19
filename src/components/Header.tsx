@@ -141,7 +141,7 @@ function MobileNavigation(props: { className: string }) {
 }
 
 function NavItem({ href, children }: { href: string; children: ReactNode }) {
-  let isActive = useRouter().pathname === href;
+  const isActive = useRouter().pathname === href;
 
   return (
     <li>
@@ -187,9 +187,11 @@ function ModeToggle() {
   function toggleMode() {
     disableTransitionsTemporarily();
 
-    let darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    let isSystemDarkMode = darkModeMediaQuery.matches;
-    let isDarkMode = document.documentElement.classList.toggle("dark");
+    const darkModeMediaQuery = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+    const isSystemDarkMode = darkModeMediaQuery.matches;
+    const isDarkMode = document.documentElement.classList.toggle("dark");
 
     if (isDarkMode === isSystemDarkMode) {
       delete window.localStorage.isDarkMode;
@@ -212,8 +214,8 @@ function ModeToggle() {
 }
 
 function clamp(number: number, a: number, b: number) {
-  let min = Math.min(a, b);
-  let max = Math.max(a, b);
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
   return Math.min(Math.max(number, min), max);
 }
 
@@ -287,7 +289,10 @@ export function Header() {
     }
 
     function updateHeaderStyles() {
-      const { top, height } = headerRef.current!.getBoundingClientRect();
+      const { top, height } = headerRef.current?.getBoundingClientRect() ?? {
+        top: 0,
+        height: 0,
+      };
       const scrollY = clamp(
         window.scrollY,
         0,
